@@ -1,4 +1,4 @@
-
+#5
 def greet_backwards(name)
  name.reverse
 end
@@ -32,14 +32,17 @@ def wrap_text(a,b)
 end
 
 #exercise 8
-sum = 0
-def expenses(array)
-  array.each do
-  += sum
+expenses = [250, 7.95, 30.95, 16.50]
+
+
+def expense(array)
+  sum = 0
+  array.each do |num|
+ sum = sum + num
   end
+  sum
+end
 
-
-array = [250, 7.95, 30.95, 16.50]
 
 #exercise 9
 
@@ -48,10 +51,13 @@ grocery_list =["carrots", "toilet paper", "apples", "salmon"]
 item.each do |item|
   "* #{item}"
 end
-
+#1
 grocery_list << rice
+
+#2
 puts grocery_list.count
 
+#3
 def banana(item)
   array.include?(item)
   if true
@@ -66,21 +72,27 @@ grocery_list.delete('salmon')
 
 
 #Exercise 10
+#1
 students = {
   :cohort1 => 34,
   :cohort2 => 42,
   :cohort3 => 22
 }
-
+#2
 def students
  print students.each
 end
 
-
+#3
 students << :cohort4 => 43
+#4
+
 array = students.keys
 
-def expansion(array)
- result = array.each * 0.5
-    return result
-  end
+def expansion(hash)
+  new_hash = Hash[hash.map { |k, v| [k, v * 1.05] }]
+  new_hash
+end
+#5
+  students.delete(:cohort1)
+  puts students
